@@ -46,3 +46,13 @@ $$ T(n) =
         13 T\left(\frac{n}{13}\right) + 2n & n > 1
     \end{cases}
 $$
+
+$T(n) = 169T(n/169) + 26n/13 + 2n$
+
+$T(n) = 13^iT(n/13^i) i*2n$
+
+Using $i = log_{13}(n)$  as a substitute.
+
+$T(n) = 1T(1) 2nlog_{13}(n)$
+
+$T(n) \in \theta (nlog(n))$
