@@ -29,15 +29,23 @@ $$ T(n) =
     \end{cases}
 $$
 
-$T(n) = 169T(n/169) + 10$
+$T(n) = 169T(n/169) + 13*5 + 5$
 
-$T(n) = 13^iT(n/13^i) + 5i$
+$T(n) = 13^iT(n/13^i) + 5 * \sum_{k=1}^i 13^k$
+
+Solve the sum using the sum of a geometric series found online:
+
+$5 * \sum_{k=1}^i 13^k = {5(13^i-1)}/12$
+
+$T(n) = 13^iT(n/13^i) + {5(13^i-1)}/12$
 
 Using $i = log_{13}(n)$  as a substitute.
 
-$T(n) = 1T(1) + 5log_{13}(n)$
+$T(n) = nT(1) + {5n-5}/12$
 
-$T(n) \in \theta (log(n))$
+$T(n) = {17n-5}/12$
+
+$T(n) \in \theta (n)$
 
 3.
 $$ T(n) =
