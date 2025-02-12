@@ -29,6 +29,16 @@ $$ T(n) =
     \end{cases}
 $$
 
+$T(n) = 169T(n/169) + 10$
+
+$T(n) = 13^iT(n/13^i) + 5i$
+
+Using $i = log_{13}(n)$  as a substitute.
+
+$T(n) = 1T(1) + 5log_{13}(n)$
+
+$T(n) \in \theta (log(n))$
+
 3.
 $$ T(n) =
     \begin{cases}
