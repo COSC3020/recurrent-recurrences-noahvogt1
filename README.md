@@ -15,9 +15,9 @@ $T(n) = T(n/169) + 10$
 
 $T(n) = T(n/13^i) + 5i$
 
-Using $i = log_13(n)$  as a substitute.
+Using $i = log_{13}(n)$  as a substitute.
 
-$T(n) = T(1) + 5log_13(n)$
+$T(n) = T(1) + 5log_{13}(n)$
 
 $T(n) \in \theta (log(n))$
 
