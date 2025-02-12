@@ -1,4 +1,5 @@
 # Recurrent Recurrences
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
 Give big $\Theta$ bounds for the following recurrence relations.
 
@@ -10,6 +11,16 @@ $$ T(n) =
     \end{cases}
 $$
 
+$T(n) = T(n/169) + 10$
+
+$T(n) = T(n/13^i) + 5i$
+
+Using $i = log_{13}(n)$  as a substitute.
+
+$T(n) = T(1) + 5log_{13}(n)$
+
+$T(n) \in \theta (log(n))$
+
 2.
 $$ T(n) =
     \begin{cases}
@@ -18,6 +29,24 @@ $$ T(n) =
     \end{cases}
 $$
 
+$T(n) = 169T(n/169) + 13*5 + 5$
+
+$T(n) = 13^iT(n/13^i) + 5 * \sum_{k=1}^i 13^k$
+
+Solve the sum using the sum of a geometric series found online:
+
+$5 * \sum_{k=1}^i 13^k = {5(13^i-1)}/12$
+
+$T(n) = 13^iT(n/13^i) + {5(13^i-1)}/12$
+
+Using $i = log_{13}(n)$  as a substitute.
+
+$T(n) = nT(1) + {5n-5}/12$
+
+$T(n) = {17n-5}/12$
+
+$T(n) \in \theta (n)$
+
 3.
 $$ T(n) =
     \begin{cases}
@@ -25,3 +54,13 @@ $$ T(n) =
         13 T\left(\frac{n}{13}\right) + 2n & n > 1
     \end{cases}
 $$
+
+$T(n) = 169T(n/169) + 26n/13 + 2n$
+
+$T(n) = 13^iT(n/13^i) i*2n$
+
+Using $i = log_{13}(n)$  as a substitute.
+
+$T(n) = 1T(1) 2nlog_{13}(n)$
+
+$T(n) \in \theta (nlog(n))$
